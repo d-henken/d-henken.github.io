@@ -5,33 +5,266 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--for browser compatibility: choose rendering engine to view the page in an correct view (for old ver. IE)  -->
         <title></title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
         <meta name="description" content=""><!--keywords/snippet for search engines-->
-        <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
-        <link rel="stylesheet" href="css_movement.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--the browser will (probably) render the width of the page at the width of its own screen -->
+        <link rel="stylesheet" href="betes.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-        
-        <script>
-            function bgGray(x) {
-            document.body.style.background='DimGray'
-            document.body.style.transition = "all 1s";
-                }  
-            function bgBlack(x) {
-            document.body.style.background='black'
-            document.body.style.transition = "all 1s";
-                }
-        </script>
-        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <!--   <script type="text/javascript" src="/betes.js"></script> -->
+        <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
     </head>
 
+<!-- <div style="padding-bottom: 56.25%; position: absolute;"><iframe width="100%" height="100%" src="https://player.vimeo.com/video/762590958?background=1&autopause=0&autoplay=1&byline=0&controls=0&loop=1&portrait=0&title=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"><small>Vimeo embedding powered by <a href="https://embed.tube">embed.tube</a></small></iframe></div>
+ -->
+
     <body>
-        <div class="main">Internet censorship is <div class="highlight" onmouseover="bgGray(this)" onmouseout="bgBlack(this)"><button>control</button></div> or <div class="highlight" onmouseover="bgGray(this)" onmouseout="bgBlack(this)"><button>suppression</button></div> of the publishing or accessing of information on the Internet. It may be carried out by governments or by <div class="highlight" onmouseover="bgGray(this)" onmouseout="bgBlack(this)"><button>private</button></div> organizations either at the behest of government or on their own initiative. Individuals and organizations may engage in <div class="highlight" onmouseover="bgGray(this)" onmouseout="bgBlack(this)"><button>self-censorship</button></div>on their own or due to <div class="highlight" onmouseover="bgGray(this)" onmouseout="bgBlack(this)"><button>intimidation</button></div> and <div class="highlight" onmouseover="bgGray(this)" onmouseout="bgBlack(this)"><button>fear</button></div>.</div>
-        <br>
-        <br>
-        <div class="main">The <div class="highlight" onmouseover="bgGray(this)" onmouseout="bgBlack(this)"><button>issues</button></div> associated with Internet <div class="highlight" onmouseover="bgGray(this)" onmouseout="bgBlack(this)"><button>censorship</button></div> are similar to those for offline <div class="highlight" onmouseover="bgGray(this)" onmouseout="bgBlack(this)"><button>censorship</button></div> of more traditional media. One difference is that national borders are more permeable online: residents of a country that bans certain information can find it on websites hosted outside the country. Thus censors must work to prevent access to information even though they lack physical or legal <div class="highlight" onmouseover="bgGray(this)" onmouseout="bgBlack(this)"><button>control</button></div> over the websites themselves. This in turn requires the use of technical <div class="highlight" onmouseover="bgGray(this)" onmouseout="bgBlack(this)"><button>censorship</button></div> methods that are unique to the Internet, such as site <div class="highlight" onmouseover="bgGray(this)" onmouseout="bgBlack(this)"><button>blocking</button></div> and content <div class="highlight" onmouseover="bgGray(this)" onmouseout="bgBlack(this)"><button>filtering</button></div>.</div>
-<br>
-<br>
-        <p id="footer">
-         <a href=https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1654464>Freedom of Connection, Freedom of Expression: The Changing Legal and Regulatory Ecology Shaping the Internet,</a><br> Dutton, William H.; Dopatka, Anna; Law, Ginette; Nash, Victoria, Division for Freedom of Expression, Democracy and Peace, United Nations Educational, Scientific and Cultural Organization (UNESCO), Paris, 2011, 103 pp., ISBN 978-9231041884    
-        </p>
+
+          <!-- 3D Break -->
+
+   <!--  <script type="module">
+        
+        import './style.css'
+        import * as THREE from 'three'
+        import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+        import * as dat from 'dat.gui'
+
+        // Debug
+        const gui = new dat.GUI()
+
+        // Canvas
+        const canvas = document.querySelector('canvas.webgl')
+
+        // Scene
+        const scene = new THREE.Scene()
+
+        // Objects
+        const geometry = new THREE.TorusGeometry( .7, .2, 16, 100 );
+
+        // Materials
+
+        const material = new THREE.MeshBasicMaterial()
+        material.color = new THREE.Color(0xff0000)
+
+        // Mesh
+        const sphere = new THREE.Mesh(geometry,material)
+        scene.add(sphere)
+
+        // Lights
+
+        const pointLight = new THREE.PointLight(0xffffff, 0.1)
+        pointLight.position.x = 2
+        pointLight.position.y = 3
+        pointLight.position.z = 4
+        scene.add(pointLight)
+
+        /**
+         * Sizes
+         */
+        const sizes = {
+            width: window.innerWidth,
+            height: window.innerHeight
+        }
+
+        window.addEventListener('resize', () =>
+        {
+            // Update sizes
+            sizes.width = window.innerWidth
+            sizes.height = window.innerHeight
+
+            // Update camera
+            camera.aspect = sizes.width / sizes.height
+            camera.updateProjectionMatrix()
+
+            // Update renderer
+            renderer.setSize(sizes.width, sizes.height)
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+        })
+
+        /**
+         * Camera
+         */
+        // Base camera
+        const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+        camera.position.x = 0
+        camera.position.y = 0
+        camera.position.z = 2
+        scene.add(camera)
+
+        // Controls
+        // const controls = new OrbitControls(camera, canvas)
+        // controls.enableDamping = true
+
+        /**
+         * Renderer
+         */
+        const renderer = new THREE.WebGLRenderer({
+            canvas: canvas
+        })
+        renderer.setSize(sizes.width, sizes.height)
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+        /**
+         * Animate
+         */
+
+        const clock = new THREE.Clock()
+
+        const tick = () =>
+        {
+
+            const elapsedTime = clock.getElapsedTime()
+
+            // Update objects
+            sphere.rotation.y = .5 * elapsedTime
+
+            // Update Orbital Controls
+            // controls.update()
+
+            // Render
+            renderer.render(scene, camera)
+
+            // Call tick again on the next frame
+            window.requestAnimationFrame(tick)
+        }
+
+        tick()
+       
+    </script> -->
+
+        <header>
+            <p class="marquee">
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?</span>
+            </p>
+        </header>
+
+        <main>
+        
+        </main>
+        
+        <footer>
+             <p class="marquee">
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BG: 168&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time in Range: 23%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;High: 38%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Low: 43%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Est. A1C: 6.7</span>
+            </p>
+           <!--  <div id="multicolumns">
+                <ul class="data" style="list-style-type:none;">
+                    <hr>
+                    <li>BG:</li>
+                    <hr>
+                    <li>Avg. Glucose:</li>
+                    <hr>
+                    <li>Esitmated A1C:</li>
+                    <hr>
+                    <li>Time in Range:</li>
+                    <hr>
+                    <li>% High:</li>
+                    <hr>
+                    <li>% Low:</li>
+                    <hr>
+                </ul> 
+                <ul class="bg" style="list-style-type:none;">
+                    <hr>
+                    <li>125mg/dl</li>
+                    <hr>
+                    <li>175mg/dl</li>
+                    <hr>
+                    <li>7.2%</li>
+                    <hr>
+                    <li>63%</li>
+                    <hr>
+                    <li>23%</li>
+                    <hr>
+                    <li>14%</li>
+                    <hr>
+                </ul>
+                <div class="spacer1">&nbsp;</div>
+                <div class="spacer2">&nbsp;</div>
+                <div class="prediction">
+                    <p class="sign">signs point to...</p>
+                    <hr id="shortline">
+                    <br>
+                    <p class="result">Definitely!</p>
+                </div>   
+            </div> -->
+        </footer>
+
+<model-viewer src="https://files.cargocollective.com/c1646599/birds.glb" ar="" ar-scale="fixed" autoplay="" camera-controls="" alt="A representation of Dougal's blood glucose" skybox-image="https://files.cargocollective.com/c1646599/belfast_sunset_puresky_8k.hdr" ios-src="https://files.cargocollective.com/c1646599/birds.glb" xr-environment="" ar-status="not-presenting" auto-rotate="" camera-orbit="225deg 70deg 5.5m"></model-viewer>
+
+<script type="module">
+  const modelViewer = document.querySelector("#envlight-demo");
+  
+  let lastX;
+  let panning = false;
+  let skyboxAngle = 0;
+  let radiansPerPixel;
+      
+  const startPan = () => {
+    const orbit = modelViewer.getCameraOrbit();
+    const { radius } = orbit;
+    radiansPerPixel = -1 * radius / modelViewer.getBoundingClientRect().height;
+    modelViewer.interactionPrompt = 'none';
+  };
+  
+  const updatePan = (thisX) => {      
+    const delta = (thisX - lastX) * radiansPerPixel;
+    lastX = thisX;
+    skyboxAngle += delta;
+    const orbit = modelViewer.getCameraOrbit();
+    orbit.theta += delta;
+    modelViewer.cameraOrbit = orbit.toString();
+    modelViewer.resetTurntableRotation(skyboxAngle);
+    modelViewer.jumpCameraToGoal();
+  }
+  
+  modelViewer.addEventListener('mousedown', (event) => {
+    panning = event.button === 2 || event.ctrlKey || event.metaKey || event.shiftKey;
+    if (!panning)
+      return;
+
+    lastX = event.clientX;
+    startPan();
+    event.stopPropagation();
+  }, true);
+
+  modelViewer.addEventListener('touchstart', (event) => {
+    const {targetTouches, touches} = event;
+    panning = targetTouches.length === 2 && targetTouches.length === touches.length;
+    if (!panning)
+      return;
+
+    lastX = 0.5 * (targetTouches[0].clientX + targetTouches[1].clientX);
+    startPan();
+  }, true);
+
+  self.addEventListener('mousemove', (event) => {
+    if (!panning)
+      return;
+
+    updatePan(event.clientX);
+    event.stopPropagation();
+  }, true);
+
+  modelViewer.addEventListener('touchmove', (event) => {
+    if (!panning || event.targetTouches.length !== 2)
+      return;
+
+    const {targetTouches} = event;
+    const thisX = 0.5 * (targetTouches[0].clientX + targetTouches[1].clientX);
+    updatePan(thisX);
+  }, true);
+
+  self.addEventListener('mouseup', (event) => {
+    panning = false;
+  }, true);
+  
+  modelViewer.addEventListener('touchend', (event) => {
+    panning = false;
+  }, true);
+</script>
+        <!-- <model-viewer> HTML element -->
+      
     </body>
+
+
+      
+
+

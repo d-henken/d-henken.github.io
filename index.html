@@ -19,118 +19,6 @@
 
     <body>
 
-          <!-- 3D Break -->
-
-   <!--  <script type="module">
-        
-        import './style.css'
-        import * as THREE from 'three'
-        import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-        import * as dat from 'dat.gui'
-
-        // Debug
-        const gui = new dat.GUI()
-
-        // Canvas
-        const canvas = document.querySelector('canvas.webgl')
-
-        // Scene
-        const scene = new THREE.Scene()
-
-        // Objects
-        const geometry = new THREE.TorusGeometry( .7, .2, 16, 100 );
-
-        // Materials
-
-        const material = new THREE.MeshBasicMaterial()
-        material.color = new THREE.Color(0xff0000)
-
-        // Mesh
-        const sphere = new THREE.Mesh(geometry,material)
-        scene.add(sphere)
-
-        // Lights
-
-        const pointLight = new THREE.PointLight(0xffffff, 0.1)
-        pointLight.position.x = 2
-        pointLight.position.y = 3
-        pointLight.position.z = 4
-        scene.add(pointLight)
-
-        /**
-         * Sizes
-         */
-        const sizes = {
-            width: window.innerWidth,
-            height: window.innerHeight
-        }
-
-        window.addEventListener('resize', () =>
-        {
-            // Update sizes
-            sizes.width = window.innerWidth
-            sizes.height = window.innerHeight
-
-            // Update camera
-            camera.aspect = sizes.width / sizes.height
-            camera.updateProjectionMatrix()
-
-            // Update renderer
-            renderer.setSize(sizes.width, sizes.height)
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-        })
-
-        /**
-         * Camera
-         */
-        // Base camera
-        const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-        camera.position.x = 0
-        camera.position.y = 0
-        camera.position.z = 2
-        scene.add(camera)
-
-        // Controls
-        // const controls = new OrbitControls(camera, canvas)
-        // controls.enableDamping = true
-
-        /**
-         * Renderer
-         */
-        const renderer = new THREE.WebGLRenderer({
-            canvas: canvas
-        })
-        renderer.setSize(sizes.width, sizes.height)
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-
-        /**
-         * Animate
-         */
-
-        const clock = new THREE.Clock()
-
-        const tick = () =>
-        {
-
-            const elapsedTime = clock.getElapsedTime()
-
-            // Update objects
-            sphere.rotation.y = .5 * elapsedTime
-
-            // Update Orbital Controls
-            // controls.update()
-
-            // Render
-            renderer.render(scene, camera)
-
-            // Call tick again on the next frame
-            window.requestAnimationFrame(tick)
-        }
-
-        tick()
-       
-    </script> -->
-
         <header>
             <p class="marquee">
                 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?</span>
@@ -138,7 +26,85 @@
         </header>
 
         <main>
-        
+        <div class="page_background">
+
+        <!-- <model-viewer> HTML element -->
+
+            <model-viewer src="https://files.cargocollective.com/c1646599/birds.glb" ar="" ar-scale="fixed" autoplay="" camera-controls="" alt="A representation of Dougal's blood glucose" skybox-image="https://files.cargocollective.com/c1646599/belfast_sunset_puresky_8k.hdr" ios-src="https://files.cargocollective.com/c1646599/birds.glb" xr-environment="" ar-status="not-presenting" auto-rotate="" camera-orbit="225deg 70deg 5.5m"></model-viewer>
+
+            <script type="module">
+              const modelViewer = document.querySelector("#envlight-demo");
+              
+              let lastX;
+              let panning = false;
+              let skyboxAngle = 0;
+              let radiansPerPixel;
+                  
+              const startPan = () => {
+                const orbit = modelViewer.getCameraOrbit();
+                const { radius } = orbit;
+                radiansPerPixel = -1 * radius / modelViewer.getBoundingClientRect().height;
+                modelViewer.interactionPrompt = 'none';
+              };
+              
+              const updatePan = (thisX) => {      
+                const delta = (thisX - lastX) * radiansPerPixel;
+                lastX = thisX;
+                skyboxAngle += delta;
+                const orbit = modelViewer.getCameraOrbit();
+                orbit.theta += delta;
+                modelViewer.cameraOrbit = orbit.toString();
+                modelViewer.resetTurntableRotation(skyboxAngle);
+                modelViewer.jumpCameraToGoal();
+              }
+              
+              modelViewer.addEventListener('mousedown', (event) => {
+                panning = event.button === 2 || event.ctrlKey || event.metaKey || event.shiftKey;
+                if (!panning)
+                  return;
+
+                lastX = event.clientX;
+                startPan();
+                event.stopPropagation();
+              }, true);
+
+              modelViewer.addEventListener('touchstart', (event) => {
+                const {targetTouches, touches} = event;
+                panning = targetTouches.length === 2 && targetTouches.length === touches.length;
+                if (!panning)
+                  return;
+
+                lastX = 0.5 * (targetTouches[0].clientX + targetTouches[1].clientX);
+                startPan();
+              }, true);
+
+              self.addEventListener('mousemove', (event) => {
+                if (!panning)
+                  return;
+
+                updatePan(event.clientX);
+                event.stopPropagation();
+              }, true);
+
+              modelViewer.addEventListener('touchmove', (event) => {
+                if (!panning || event.targetTouches.length !== 2)
+                  return;
+
+                const {targetTouches} = event;
+                const thisX = 0.5 * (targetTouches[0].clientX + targetTouches[1].clientX);
+                updatePan(thisX);
+              }, true);
+
+              self.addEventListener('mouseup', (event) => {
+                panning = false;
+              }, true);
+              
+              modelViewer.addEventListener('touchend', (event) => {
+                panning = false;
+              }, true);
+            </script>
+
+            </div>
         </main>
         
         <footer>
@@ -186,86 +152,6 @@
                 </div>   
             </div> -->
         </footer>
-
-
-<div class="page_background">
-
-        <!-- <model-viewer> HTML element -->
-
-<model-viewer src="https://files.cargocollective.com/c1646599/birds.glb" ar="" ar-scale="fixed" autoplay="" camera-controls="" alt="A representation of Dougal's blood glucose" skybox-image="https://files.cargocollective.com/c1646599/belfast_sunset_puresky_8k.hdr" ios-src="https://files.cargocollective.com/c1646599/birds.glb" xr-environment="" ar-status="not-presenting" auto-rotate="" camera-orbit="225deg 70deg 5.5m"></model-viewer>
-
-<script type="module">
-  const modelViewer = document.querySelector("#envlight-demo");
-  
-  let lastX;
-  let panning = false;
-  let skyboxAngle = 0;
-  let radiansPerPixel;
-      
-  const startPan = () => {
-    const orbit = modelViewer.getCameraOrbit();
-    const { radius } = orbit;
-    radiansPerPixel = -1 * radius / modelViewer.getBoundingClientRect().height;
-    modelViewer.interactionPrompt = 'none';
-  };
-  
-  const updatePan = (thisX) => {      
-    const delta = (thisX - lastX) * radiansPerPixel;
-    lastX = thisX;
-    skyboxAngle += delta;
-    const orbit = modelViewer.getCameraOrbit();
-    orbit.theta += delta;
-    modelViewer.cameraOrbit = orbit.toString();
-    modelViewer.resetTurntableRotation(skyboxAngle);
-    modelViewer.jumpCameraToGoal();
-  }
-  
-  modelViewer.addEventListener('mousedown', (event) => {
-    panning = event.button === 2 || event.ctrlKey || event.metaKey || event.shiftKey;
-    if (!panning)
-      return;
-
-    lastX = event.clientX;
-    startPan();
-    event.stopPropagation();
-  }, true);
-
-  modelViewer.addEventListener('touchstart', (event) => {
-    const {targetTouches, touches} = event;
-    panning = targetTouches.length === 2 && targetTouches.length === touches.length;
-    if (!panning)
-      return;
-
-    lastX = 0.5 * (targetTouches[0].clientX + targetTouches[1].clientX);
-    startPan();
-  }, true);
-
-  self.addEventListener('mousemove', (event) => {
-    if (!panning)
-      return;
-
-    updatePan(event.clientX);
-    event.stopPropagation();
-  }, true);
-
-  modelViewer.addEventListener('touchmove', (event) => {
-    if (!panning || event.targetTouches.length !== 2)
-      return;
-
-    const {targetTouches} = event;
-    const thisX = 0.5 * (targetTouches[0].clientX + targetTouches[1].clientX);
-    updatePan(thisX);
-  }, true);
-
-  self.addEventListener('mouseup', (event) => {
-    panning = false;
-  }, true);
-  
-  modelViewer.addEventListener('touchend', (event) => {
-    panning = false;
-  }, true);
-</script>
-</div>
 
       
     </body>

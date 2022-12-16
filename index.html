@@ -5,161 +5,58 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--for browser compatibility: choose rendering engine to view the page in an correct view (for old ver. IE)  -->
         <title></title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
         <meta name="description" content=""><!--keywords/snippet for search engines-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--the browser will (probably) render the width of the page at the width of its own screen -->
-        <link rel="stylesheet" href="betes.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-      <!--   <script type="text/javascript" src="/betes.js"></script> -->
-        <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+        <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
+        <link rel="stylesheet" href="style.css">
     </head>
+  <body>
 
-<!-- <div style="padding-bottom: 56.25%; position: absolute;"><iframe width="100%" height="100%" src="https://player.vimeo.com/video/762590958?background=1&autopause=0&autoplay=1&byline=0&controls=0&loop=1&portrait=0&title=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"><small>Vimeo embedding powered by <a href="https://embed.tube">embed.tube</a></small></iframe></div>
- -->
+<!--      <div class="sidebar">
+        <div><a class="hvr-skew" href="../index.html">Home</a></div>
+        <div><a class="hvr-skew" href="html/menu_1.html">Types of Contrast</a></div>
+        <br>
+        <div><a class="hvr-skew" href="html/size.html">Contrast of Size</a></div>
+        <div><a class="hvr-skew" href="html/weight.html">Contrast of Weight</a></div>
+        <div><a class="hvr-skew" href="html/form.html">Contrast of Form</a></div>
+        <div><a class="hvr-skew" href="html/structure.html">Contrast of Structure</a></div>
+        <div><a class="hvr-skew" href="html/texture.html">Contrast of Texture</a></div>
+        <div><a class="hvr-skew" href="html/color.html">Contrast of Color</a></div>
+        <div><a class="hvr-skew" href="html/direction.html">Contrast of Direction</a></div>
+        <div><a class="hvr-skew" href="html/types.html">Other Types of Contrast</a></div>
+        <br>
+        <img style="mix-blend-mode: multiply;" src="common/pixel.gif" alt="pixel" width="75" height="75">
+    </div> -->
 
-    <body>
-
-        <header>
-            <p class="marquee">
-                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Dougal still alive?</span>
-            </p>
-        </header>
-
-        <main>
-        <div class="page_background">
-
-        <!-- <model-viewer> HTML element -->
-
-            <model-viewer src="birds.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" autoplay environment-image="belfast_sunset_puresky_8k.hdr" skybox-image="belfast_sunset_puresky_8k.hdr" auto-rotate camera-orbit="225deg 70deg 5.5m"> </model-viewer>
-
-
-    <!--         <model-viewer src="https://files.cargocollective.com/c1646599/birds.glb" ar="" ar-scale="fixed" autoplay="" camera-controls="" alt="A representation of Dougal's blood glucose" skybox-image="https://files.cargocollective.com/c1646599/belfast_sunset_puresky_8k.hdr" ios-src="https://files.cargocollective.com/c1646599/birds.glb" xr-environment="" ar-status="not-presenting" auto-rotate="" camera-orbit="225deg 70deg 5.5m"></model-viewer> -->
-
-            <script type="module">
-              const modelViewer = document.querySelector("#envlight-demo");
-              
-              let lastX;
-              let panning = false;
-              let skyboxAngle = 0;
-              let radiansPerPixel;
-                  
-              const startPan = () => {
-                const orbit = modelViewer.getCameraOrbit();
-                const { radius } = orbit;
-                radiansPerPixel = -1 * radius / modelViewer.getBoundingClientRect().height;
-                modelViewer.interactionPrompt = 'none';
-              };
-              
-              const updatePan = (thisX) => {      
-                const delta = (thisX - lastX) * radiansPerPixel;
-                lastX = thisX;
-                skyboxAngle += delta;
-                const orbit = modelViewer.getCameraOrbit();
-                orbit.theta += delta;
-                modelViewer.cameraOrbit = orbit.toString();
-                modelViewer.resetTurntableRotation(skyboxAngle);
-                modelViewer.jumpCameraToGoal();
-              }
-              
-              modelViewer.addEventListener('mousedown', (event) => {
-                panning = event.button === 2 || event.ctrlKey || event.metaKey || event.shiftKey;
-                if (!panning)
-                  return;
-
-                lastX = event.clientX;
-                startPan();
-                event.stopPropagation();
-              }, true);
-
-              modelViewer.addEventListener('touchstart', (event) => {
-                const {targetTouches, touches} = event;
-                panning = targetTouches.length === 2 && targetTouches.length === touches.length;
-                if (!panning)
-                  return;
-
-                lastX = 0.5 * (targetTouches[0].clientX + targetTouches[1].clientX);
-                startPan();
-              }, true);
-
-              self.addEventListener('mousemove', (event) => {
-                if (!panning)
-                  return;
-
-                updatePan(event.clientX);
-                event.stopPropagation();
-              }, true);
-
-              modelViewer.addEventListener('touchmove', (event) => {
-                if (!panning || event.targetTouches.length !== 2)
-                  return;
-
-                const {targetTouches} = event;
-                const thisX = 0.5 * (targetTouches[0].clientX + targetTouches[1].clientX);
-                updatePan(thisX);
-              }, true);
-
-              self.addEventListener('mouseup', (event) => {
-                panning = false;
-              }, true);
-              
-              modelViewer.addEventListener('touchend', (event) => {
-                panning = false;
-              }, true);
-            </script>
-
-            </div>
-        </main>
-        
-        <footer>
-             <p class="marquee">
-                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BG: 168&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time in Range: 23%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;High: 38%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Low: 43%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Est. A1C: 6.7</span>
-            </p>
-           <!--  <div id="multicolumns">
-                <ul class="data" style="list-style-type:none;">
-                    <hr>
-                    <li>BG:</li>
-                    <hr>
-                    <li>Avg. Glucose:</li>
-                    <hr>
-                    <li>Esitmated A1C:</li>
-                    <hr>
-                    <li>Time in Range:</li>
-                    <hr>
-                    <li>% High:</li>
-                    <hr>
-                    <li>% Low:</li>
-                    <hr>
-                </ul> 
-                <ul class="bg" style="list-style-type:none;">
-                    <hr>
-                    <li>125mg/dl</li>
-                    <hr>
-                    <li>175mg/dl</li>
-                    <hr>
-                    <li>7.2%</li>
-                    <hr>
-                    <li>63%</li>
-                    <hr>
-                    <li>23%</li>
-                    <hr>
-                    <li>14%</li>
-                    <hr>
-                </ul>
-                <div class="spacer1">&nbsp;</div>
-                <div class="spacer2">&nbsp;</div>
-                <div class="prediction">
-                    <p class="sign">signs point to...</p>
-                    <hr id="shortline">
-                    <br>
-                    <p class="result">Definitely!</p>
-                </div>   
-            </div> -->
-        </footer>
-
-      
-    </body>
-
-
-      
-
-
+    <div>
+        <div><h1 class="hvr-skew" href="../index.html">Dougal Henken</h1></div>
+        <div><h1 class="hvr-skew" href="html/menu_1.html">GD 4 WEB 2022</h1></div>
+        <br>
+            <div class="row">
+                <div class="column">
+                    <ol type="1">
+                    <li><div><a class="hvr-skew" href="exercise_1/index.html">Exercise 1</a></div></li>
+                    <li><div><a class="hvr-skew" href="exercise_2/index.html">Exercise 2</a></div></li>
+                    <li><div><a class="hvr-skew" href="exercise_3/index.html">Exercise 3</a></div></li>
+                    <li><div><a class="hvr-skew" href="exercise_4/index.html">Exercise 4</a></div></li>
+                    <li><div><a class="hvr-skew" href="exercise_5/index.html">Exercise 5</a></div></li>
+                    <li><div><a class="hvr-skew" href="exercise_6/index.html">Exercise 6</a></div></li>
+                    <li><div><a class="hvr-skew" href="exercise_7/index.html">Relay</a></div></li>
+                    </ol>
+                </div>
+                <div class="column">
+                    <ol>
+                    <li><div><a class="hvr-skew" href="https://isdougalalive.cargo.site/">Project 1</a></div></li>
+                        <ul>
+                            <li><div><a class="hvr-skew" href="https://isdougalalive.herokuapp.com/">Live Tracker</a></div></li>
+                        </ul>
+                    <li><div><a class="hvr-skew" href="project_2/index.html">Project 2</a></div></li>
+                        <ul>
+                            <li><div><a class="hvr-skew" href="https://vimeo.com/781632801">Demo Video</a></div></li>
+                        </ul>
+                    </ol>
+                </div>
+                <div class="column">
+                </div>
+    </div>
+    </div>
+  </body>
+</html>

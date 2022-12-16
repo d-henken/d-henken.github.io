@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<!--
+        _ __ ___  ___ _ __   ___  _ __  ___ ___   _____
+        | '__/ _ \/ __| '_ \ / _ \| '_ \/ __| \ \ / / _ \
+        | | |  __/\__ \ |_) | (_) | | | \__ \ |\ V /  __/
+        |_|  \___||___/ .__/ \___/|_| |_|___/_| \_/ \___|
+                    | |
+                    |_|
+    Media Query Relay by 15 students in Graphic Design for the Web, Fall 2021.
+    Students: Nicole Lee, Alex Kim, Hope Wisor, Anna Jung, Moritz Lonyay, Annie Ding, Ian Keliher, Yisheng Yuan, Henry Surpria, Dougal Henken, Valia Liu, So Jung Yoon, Grace Zhao ,  Aaron Neal, and Leo Liu    
+    Instructor: Minkyoung Kim; TA: Jacob Lee; Class website: https://mkim.netlify.com/gdfwf22/
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>gdfwf22 — Media Query Relay</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        @media screen and (min-width: 1620px)  {
+            /* Leo */
+            body {
+                background-color: rgb(173, 214, 148);
+            }
+
+            #div13 { 
+                position: relative;
+                top: 50px;
+                left: 300 px;
+                transform: translate(-505, -50%);
+                width: 300px;
+                height: 300px;
+                background: #ffffff;
+                border: 20px solid rgb(166, 166, 166);
+                border-radius: 50%;
+                box-sizing: border-box;
+                box-shadow: 0 0 0 36px #434343,
+                    0 0 0 40px black;
+                animation: animate 3s linear infinite;
+
+                }
+                @keyframes animate {
+                 0% {
+                transform: scale(1.0);
+                transform: translate(0px,0px);
+            
+
+                }
+                100% {
+                transform: scale(3.0);
+                transform: translate(800px,500px);
+                }
+            }
+
+
+
+            }
+       
+     
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+        @media screen and (min-width: 1550px) and (max-width: 1620px)  {
+            /* Aaron */
+            body {
+                animation: gradient 6s ease infinite;
+            }
+            @keyframes gradient {
+                0% {
+                    background-image: linear-gradient(-45deg, yellow, #3ce783, #23d2d5, #78ffe0);
+                    background-position: 0% 20%;
+                }
+                40% {
+                    background-image: linear-gradient(-45deg,  #088F8F, #0096FF, #000000);
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-image: linear-gradient(-45deg,  #23d2d5, #000000);
+                    background-position: 0% 50%;
+                }
+            }
+                #div13 { 
+                position: relative;
+                top: 50px;
+                left: 300 px;
+                transform: translate(-505, -50%);
+                width: 300px;
+                height: 300px;
+                background: #000000;
+                border: 8px solid white;
+                border-radius: 50%;
+                box-sizing: border-box;
+                box-shadow: 0 0 0 36px #23d2d5,
+                    0 0 0 40px black;
+                animation: animate 4s linear infinite
+                }
+                @keyframes animate {
+                 0% {
+                transform: scale(5.0);
+                box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+                }
+                100% {
+                transform: scale(1.0);
+                }
+                
+            animation: gelatine 0.5s infinite;
+            }
+             @keyframes gelatine {
+            from, to { transform: scale(1, 1); }
+            25% { transform: scale(0.9, 1.1); }
+            50% { transform: scale(1.1, 0.9); }
+            75% { transform: scale(0.95, 1.05); }
+            }
+
+        }
+        
+        @media screen and (min-width: 1480px) and (max-width: 1550px)  {
+            /* Grace */
+
+            body {
+                animation: gradient 5s ease infinite;
+            }
+            @keyframes gradient {
+                0% {
+                    background-image: linear-gradient(-45deg, yellow, #3ce783, #23d2d5, #78ffe0);
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-image: linear-gradient(-45deg,  #3ce783, #23d2d5, #78ffe0);
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-image: linear-gradient(-45deg,  #23d2d5, #78ffe0);
+                    background-position: 0% 50%;
+                }
+            }
+            #div13 { 
+                position: absolute;
+                top: 35%;
+                left: 40%;
+                transform: translate(-505, -50%);
+                width: 100px;
+                height: 100px;
+                background: #23d2d5;
+                border: 1px solid white;
+                border-radius: 50%;
+                box-sizing: border-box;
+                box-shadow: 0 0 0 36px #23d2d5,
+                    0 0 0 40px lightcyan;
+            }
+
+            #div13:before, #div13:after {
+                content: '';
+                position: absolute;
+                left: -30px;
+                top: -30px;
+                right: -30px;
+                bottom: -30px;
+                border: 2px solid white;
+                border-radius: 50%;
+                animation: animate 2s linear infinite
+            }
+
+            #div13:after {
+                animation-delay: 2s;
+            }
+            @keyframes animate {
+            0% {
+                transform: scale(5.0);
+                box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+            }
+  
+            100% {
+                transform: scale(1.0);
+            }
+        }
+        }
+        
+        @media screen and (min-width: 1410px) and (max-width: 1480px) {
+            /* So Jung */
+
+            body {
+                
+                background-color: yellow;
+                };
+
+            #div1 {
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                margin: 0px;
+            }
+
+            #div12 {
+                position: relative;
+                left: 60vw;
+                top: 20vw;
+                transform: rotate(50deg);
+                /* border: none; */
+                animation: move 5s infinite;
+                border-radius: 0;
+                transform: translateX(-80%) translateY(-20%);
+            }
+
+            @keyframes move {
+                    0% {
+                        background-image: linear-gradient(purple,yellow);
+                        height: 50vh;
+                        width: 10vh;
+                        top: 22.5vh;
+                        clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+                    }
+
+                    25% {
+                        background-image:linear-gradient(purple,yellow);
+                        height: 10vh;
+                        width: 50vh;
+                        top: 80vh;
+                        clip-path: polygon(0 0, 38% 0, 75% 100%, 36% 100%);
+                    }
+
+                    50% {
+                        background-image: linear-gradient(blue, yellow);
+                        height: 50vh;
+                        width: 100vh;
+                        top: 22.5vh;
+                        clip-path: polygon(0 0, 24% 100%, 100% 100%, 74% 0);
+                    }
+
+                    75% {
+                        background-image: linear-gradient(purple, blue, yellow);
+                        height: 50vh;
+                        width: 50vh;
+                        top: 22.5vh;
+                        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+                    }
+                    100% {
+                        background-image: linear-gradient(purple, blue, yellow);
+                        height: 50vh;
+                        width: 10vh;
+                        top: 22.5vh;
+                        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+                    }
+
+                }
+
+        }
+        
+        @media screen and (min-width: 1340px) and (max-width: 1410px) {
+            /* Valia */
+
+            body {
+                transition: ease-in-out 0.5s;
+                background-color: rgb(211, 133, 235);
+            }
+
+            #div1 {
+                background-image: url(images/nature.png);
+                display: block;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                margin: -8px;
+                mix-blend-mode: multiply;
+            }
+
+            #div12 {
+                position: fixed;
+                top: 22.5vh;
+                left: 10vw;
+                transform: rotate(0deg);
+                border: 1.5px solid white;
+                animation: shrink 2s ease infinite;
+                border-radius: 0;
+                mix-blend-mode: difference;
+            }
+
+            @keyframes shrink {
+                    0% {
+                        background-color: rgb(255, 68, 186);
+                        height: 50vh;
+                        width: 50vh;
+                    }
+
+                    50% {
+                        background-color: rgb(84, 255, 68);
+                        height: 10vh;
+                        width: 10vh;
+                    }
+
+                    100% {
+                        background-color: rgb(255, 68, 186);
+                        height: 50vh;
+                        width: 50vh;
+                    }
+                }
+        }
+        
+        @media screen and (min-width: 1270px) and (max-width: 1340px) {
+            /* Dougal */
+
+        body{
+
+               background: linear-gradient(-45deg, #5c5051, #57ffa2, #00d4ff, #5c5051);
+               background-size: 400% 400%;
+               animation: gradient 5s ease infinite;
+               height: 100vh;
+            }
+            
+
+            @keyframes gradient {
+            0% {
+            background-position: 0% 50%;
+            }
+            50% {
+            background-position: 100% 50%;
+            }
+            100% {
+            background-position: 0% 50%;
+            }
+            }
+
+            @keyframes wobble-p1 {
+                    0% {
+                        background-color: limegreen;
+                        border-radius: 0% 10% 40% 50%;
+                        position: fixed;
+                        animation: 25s ease infinite;
+                        animation-direction: alternate;
+                        /*top: 22vh;
+                        left: 10vw;*/
+                        -webkit-transform: rotate3d(1, 1, 0, 0deg);
+                                transform: rotate3d(1, 1, 0, 0deg);
+                    }
+
+               /*     25% {
+                        background-color: magenta;
+                        border-radius: 50% 50% 0% 50%;
+                        position: fixed;
+                        top: 20vh;
+                        left: 20vw;
+                        transform: rotate(30deg);
+                
+                    }*/
+
+                    50% {
+                        background-color: indianred;
+                        border-radius: 0% 10% 40% 50%;
+                        position: fixed;
+                        animation: 25s ease infinite;
+                        animation-direction: alternate;
+                        /*top: 22vh;
+                        left: 10vw;*/
+                        -webkit-transform: rotate3d(1, 1, 0, -180deg);
+                                transform: rotate3d(1, 1, 0, -180deg);
+                    }
+
+                 /*   75% {
+                        background-color: cyan;
+                        border-radius: 50% 0% 40% 10%;
+                        position: fixed;
+                        top: 22vh;
+                        left: 10vw;
+                        transform: rotate(50deg);
+                    }*/
+
+                    100% {
+                        background-color: limegreen;
+                        border-radius: 0% 10% 40% 50%;
+                        position: fixed;
+                        animation: 25s ease infinite;
+                        animation-direction: alternate;
+                        /*top: 22vh;
+                        left: 10vw;*/
+                        -webkit-transform: rotate3d(1, 1, 0, 0deg);
+                                transform: rotate3d(1, 1, 0, 0deg);
+                    }
+                }
+
+             #div12 {
+                height: 60vh;
+                width: 60vh;
+                position: fixed;
+                top: 22vh;
+                left: 10vw;
+                transform: rotate(60deg);
+                background-color: limegreen;
+                border-radius: 0% 10% 40% 50%;
+                animation-name: wobble-p1;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-timing-function: cubic-bezier(.17,.67,.91,.58);
+                animation-direction: normal;
+
+            }
+            
+        }
+
+          
+        
+        @media screen and (min-width: 1200px) and (max-width: 1270px) {
+            /* Henry */   
+
+        body{
+
+                background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);;
+                animation-name: background-q3;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+                animation-timing-function: cubic-bezier(.17,.67,.91,.58);
+                animation-direction: normal;
+            }
+
+            @keyframes background-q3 {
+                    0% {
+                background: background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+                animation: 5s ease-in-out;
+                    }
+
+                    25% {
+                background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+                animation: 5s ease-in-out;
+                    }
+
+                    50% {
+                background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+                animation: 5s ease-in-out;
+                    }
+
+                    75% {
+                background: background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+                animation: 5s ease-in-out;
+                    }
+
+                    100% {
+                background: background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+                animation: 5s ease-in-out;
+                    }
+            }
+
+
+            #div12 {
+                height: 60vh;
+                width: 60vh;
+                position: fixed;
+                top: 22vh;
+                left: 10vw;
+                transform: rotate(60deg);
+                background-color: limegreen;
+                border-radius: 0% 10% 40% 50%;
+                animation-name: wobble-p1;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+                animation-timing-function: cubic-bezier(.17,.67,.91,.58);
+                animation-direction: normal;
+
+        }
+
+        #div12:hover {
+                mix-blend-mode: exclusion;
+        }
+
+        @keyframes wobble-p1 {
+                    0% {
+                        background-color: red;
+                        border-radius: 50% 50% 50% 50%;
+                        position: fixed;
+                        top: 0vh;
+                        left: 70vw;
+                        transform: rotate(0deg);
+                    }
+
+                    25% {
+                        background-color: magenta;
+                        border-radius: 50% 50% 0% 50%;
+                        position: fixed;
+                        top: 20vh;
+                        left: 20vw;
+                        transform: rotate(30deg);
+                
+                    }
+
+                    50% {
+                        background-color: yellow;
+                        border-radius: 50% 50% 10% 0%;
+                        position: fixed;
+                        top: 22vh;
+                        left: 15vw;
+                        transform: rotate(40deg);
+                    }
+
+                    75% {
+                        background-color: cyan;
+                        border-radius: 50% 0% 40% 10%;
+                        position: fixed;
+                        top: 22vh;
+                        left: 10vw;
+                        transform: rotate(50deg);
+                    }
+
+                    100% {
+
+                        background-color: limegreen;
+                        border-radius: 0% 10% 40% 50%;
+                        position: fixed;
+                        top: 22vh;
+                        left: 10vw;
+                        transform: rotate(60deg);
+              
+                    }
+        }
+            
+        }
+
+        @media screen and (min-width: 1130px) and (max-width: 1200px) {
+            /* Yisheng: */
+            body{
+
+                background-color:#000;
+                animation-name: background-c1;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+
+
+
+            }
+
+            @keyframes background-c1 {
+                    0% {
+                background: black;
+                    }
+                    25% {
+                background: white;
+                    }
+                    50% {
+                background: black;
+                    }
+                    75% {
+                background: white;
+                    }
+                    100% {
+                background: black;
+                     }
+                     
+            }
+
+            @keyframes background-c2 {
+                    0% {
+                background: red;
+                    }
+                    25% {
+                background: black;
+                    }
+                    50% {
+                background: red;
+                    }
+                    75% {
+                background: black;
+                    }
+                    100% {
+                background: red;
+                     }
+            }
+
+            @keyframes white-mid {
+                0% {top: 0; right: 0; height: 0vh; width: 0vw;}
+                90% {top: 50vh; right: 50vw; height: 35vh; width: 35vh;}
+                100% {top: 50vh; right: 0vw; height: 35vh; width: 35vh;}
+
+            }
+
+            @keyframes black-side {
+                0% {top: 0; left: 0; height: 0vh; width: 0vw;}
+                50% {top: 0vh; right: 70vw; height: 20vh; width: 20vh;}
+                100% {top: 10vh; left: 75vw; height: 20vh; width: 20vh;}
+            }
+
+            
+            #div12 {
+                height: 60vh;
+                width: 60vh;
+                position: fixed;
+                top: 0vh;
+                left: 70vw;
+                background-color: red;
+                border-radius: 50%;
+                animation-name: background-c2;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+
+                
+            }
+
+            #div10 {
+                height: 35vh;
+                width: 35vh;
+                position: fixed;
+                top: 50vh;
+                left: 50vw;
+                background-color: #ffffff;
+                border-radius: 50%;
+                animation-name: white-mid;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+            
+            #div11 {
+                height: 20vh;
+                width: 20vh;
+                position: fixed;
+                top: 70vh;
+                left: 20vw;
+                background-color: rgb(0, 0, 0);
+                border-radius: 50%;
+                animation-name: black-side;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes red-side {
+                0% {bottom: 0; left: 0; height: 0vh; width: 0vw;}
+                60% {bottom: 20vh; right: 70vw; height: 10vh; width: 10vh;}
+                100% {bottom: 40vh; right: 40vw; height: 10vh; width: 10vh;}
+            }
+            @keyframes red-bot {
+                0% {bottom: 0; left: 0; height: 0vh; width: 0vw;}
+                60% {top: 90vh; left: 10vw; height: 6vh; width: 6vh;}
+                100% {top: 30vh; left: 90vw; height: 4vh; width: 4vh;}
+            }
+
+        
+
+            #div8 {
+                height: 10vh;
+                width: 10vh;
+                position: fixed;
+                top: 60vh;
+                left: 60vw;
+                background-color: rgb(255, 0, 0);
+                border-radius: 50%;
+                animation-name: red-side;
+                animation-duration: 2s;
+                mix-blend-mode: multiply;
+                animation-iteration-count: infinite;
+            }
+           
+
+            #div6 {
+                height: 10vh;
+                width: 10vh;
+                position: fixed;
+                top: 60vh;
+                left: 60vw;
+                border-radius: 50%;
+                animation-name: red-side;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                background-image: url('https://media-be.chewy.com/wp-content/uploads/2021/05/27135654/Shiba-Inu_FeaturedImage-1024x615.jpg');
+                filter: grayscale(1);
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+            }
+
+
+            #div7 {
+                height: 4vh;
+                width: 4vh;
+                position: fixed;
+                top: 60vh;
+                left: 60vw;
+                border-radius: 50%;
+                background-color: red;
+                border-radius: 50%;
+                animation-name: red-bot;
+                animation-duration: 2s;
+                mix-blend-mode: multiply;
+                animation-iteration-count: infinite;
+            }
+        }
+
+
+        @media screen and (min-width: 1060px) and (max-width: 1130px) {
+            /* Ian */
+            body {
+                background-image: url("images/scene.jpg");
+                background-color: #39b48e;
+                background-repeat: no-repeat;
+                background-size:cover;      
+            }
+
+
+
+            @keyframes background-fade {
+                0%   {opacity: 0;}
+                100% {opacity: 1;}
+            }
+
+            #div6 {
+                /*display: block;*/
+                position: fixed;
+                height: 40vh;
+                width: 60vw;
+                top: 0;
+                left: 0;
+                margin-left: -25%;
+                margin-right: -25%;
+                filter: blur(90px);
+                border-radius: 50%;
+                background-color: yellow;
+                animation-name: background-fade;
+                animation-duration: 2s;
+                opacity: 1;
+
+            }
+
+
+            #div7 {
+                position: fixed;
+                height: 100vh;
+                width: 100vw;
+                /*background-color: black;*/
+                margin: 0;
+                top: 0;
+                left: 0;
+                z-index: -5;
+                animation-name: background-fade;
+                animation-duration: 2s;
+                background-color: #60b5ce;
+                opacity: 1;
+                /*animation-iteration-count: infinite;*/
+                /*animation-direction: alternate;*/
+
+            }
+            
+
+            #div8 {
+                position: fixed;
+                height: 80vh;
+                width: 80vw;
+                bottom: 0;
+                right: 0;
+                margin-right: -25%;
+                margin-bottom: -25%;
+                filter: blur(80px);
+                border-radius: 50%;
+                background-color: #f4e5b9;
+                animation-name: background-fade;
+                animation-duration: 2s;
+                opacity: 1;
+
+            }
+
+
+            /*SHIBA ANIMATIONS*/
+
+            @keyframes shiba1 {
+                0% {top: 0; left: 0; height: 0vh; width: 0vw;}
+                100% {top: 50vh; left: 50vw; height: 30vh; width: 30vh;}
+            }
+
+            @keyframes shiba2 {
+                0% {top: 0; left: 0; height: 0vh; width: 0vw;}
+                100% {top: 0vh; left: 70vw; height: 60vh; width: 60vh;}
+            }
+
+            
+
+            #div9 {
+                height: 30vh;
+                width: 30vh;
+                position: fixed;
+                top: 50vh;
+                left: 50vw;
+                /*background-color: red;*/
+                border-radius: 50%;
+                animation-name: shiba1;
+                animation-duration: 2s;
+                /*animation-duration: shiba1 2s, wiggle 2s;*/
+                background-image: url('https://media-be.chewy.com/wp-content/uploads/2021/05/27135654/Shiba-Inu_FeaturedImage-1024x615.jpg');
+                filter: grayscale(1);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /*Shiba1 overlay*/
+
+            #div10 {
+                height: 30vh;
+                width: 30vh;
+                position: fixed;
+                top: 50vh;
+                left: 50vw;
+                background-color: #ffb700;
+                border-radius: 50%;
+                animation-name: shiba1;
+                animation-duration: 2s;
+                mix-blend-mode: multiply;
+            }
+
+
+            #div11 {
+                height: 60vh;
+                width: 60vh;
+                position: fixed;
+                top: 0vh;
+                left: 70vw;
+                /*background-color: red;*/
+                border-radius: 50%;
+                animation-name: shiba2;
+                animation-duration: 2s;
+                /*background-image: url('https://www.akc.org/wp-content/uploads/2017/11/Shiba-Inu-standing-in-profile-outdoors.jpg');*/
+                background-image: url('https://media-be.chewy.com/wp-content/uploads/2021/05/27135654/Shiba-Inu_FeaturedImage-1024x615.jpg');
+                filter: grayscale(1);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /*Shiba2 overlay*/
+
+            #div12 {
+                height: 60vh;
+                width: 60vh;
+                position: fixed;
+                top: 0vh;
+                left: 70vw;
+                background-color: red;
+                border-radius: 50%;
+                animation-name: shiba2;
+                animation-duration: 2s;
+                mix-blend-mode: multiply;
+            }
+
+
+            
+
+        }    
+
+        @media screen and (min-width: 990px) and (max-width: 1060px) {
+            /* Annie */
+            body {
+                background-image: url("images/scene.png");
+                background-color: #39b48e;
+                background-repeat: no-repeat;
+                background-size:cover; 
+                overflow: scroll;
+                }
+            
+       
+            #div1{
+                display:block;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                height:60vh; width:60vh; border-radius:30vh; background: yellow;
+                animation-name: sunrays;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-direction:normal;
+               
+            }
+
+        
+            #div2{
+                display:block;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                 height:60vh; width:60vh; border-radius:30vh; background: yellow;
+                 opacity: 0;
+            }
+
+            #div2:hover{
+                opacity: 1;
+            
+}
+            #div3 {
+                display:block;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                height:50vh; width:50vh; border-radius:25vh; background: rgb(255, 183, 0);
+                opacity: 0;
+            }
+
+            #div3:hover{
+                opacity: 1;
+            }
+
+            #div4 {
+                display:block;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                height:40vh; width:40vh; border-radius:20vh; background: rgb(255, 111, 0);
+                opacity: 0;
+            }
+
+            #div4:hover{
+                opacity: 1;
+            }
+            
+            #div5 {
+                display:block;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                height:30vh; width:30vh; border-radius:15vh; background: rgb(255, 60, 0);
+                opacity: 0;
+            }
+
+            #div5:hover{
+                opacity: 1;
+            }
+
+            #div6 {
+                display:block;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                height:20vh; width:20vh; border-radius:10vh; background: rgb(255, 0, 0);
+                opacity: 0;
+            }
+
+            #div6:hover{
+                opacity: 1;
+            }
+
+          @keyframes sunrays {
+  0%   { height:60vh; width:60vh; border-radius:30vh; background: yellow;}
+  25%  {height:50vh; width:50vh; border-radius:25vh; background: rgb(255, 183, 0);}
+  50%  {height:40vh; width:40vh; border-radius:20vh; background: rgb(255, 111, 0);}
+  75%  {height:30vh; width:30vh; border-radius:15vh; background: rgb(255, 60, 0);}
+  100% { height:20vh; width:20vh; border-radius:10vh; background: rgb(255, 0, 0);}
+}
+
+
+        }
+        
+        @media screen and (min-width: 920px) and (max-width: 990px) {
+            /* Moritz */
+        body {
+            background-color: #ffff00;
+          }
+
+
+        #div1 {
+            display: block;
+            position: absolute;
+            background-color: black;
+            top: 10px;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+        }
+
+          #div2 {
+            display: block;
+            position: absolute;
+            background-color: #f7f05c;
+            top: 20px;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+        }
+
+             #div3 {
+            display: block;
+            position: absolute;
+            background-color: black;
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+        }
+
+            #div4 {
+            display: block;
+            position: absolute;
+            background-color: #fcf677;
+            top: 40px;
+            bottom: 40px;
+            left: 40px;
+            right: 40px;
+        }
+
+            #div5 {
+            display: block;
+            position: absolute;
+            background-color: black;
+            top: 50px;
+            bottom: 50px;
+            left: 50px;
+            right: 50px;
+        }
+
+            #div6 {
+            display: block;
+            position: absolute;
+            background-color: #faf587;
+            top: 60px;
+            bottom: 60px;
+            left: 60px;
+            right: 60px;
+        }
+
+            #div7 {
+            display: block;
+            position: absolute;
+            background-color: black;
+            top: 70px;
+            bottom: 70px;
+            left: 70px;
+            right: 70px;
+        }
+
+            #div8 {
+            display: block;
+            position: absolute;
+            background-color: #fcf89a;
+            top: 80px;
+            bottom: 80px;
+            left: 80px;
+            right: 80px;
+        }
+
+
+            #div9 {
+            display: block;
+            position: absolute;
+            background-color: black;
+            top: 90px;
+            bottom: 90px;
+            left: 90px;
+            right: 90px;
+        }
+
+            #div10 {
+            display: block;
+            position: absolute;
+            background-color: #fffba8;
+            top: 100px;
+            bottom: 100px;
+            left: 100px;
+            right: 100px;
+        }
+
+              #div11 {
+            display: block;
+            position: absolute;
+            background-color: black;
+            top: 110px;
+            bottom: 110px;
+            left: 110px;
+            right: 110px;
+        }
+
+               #div12 {
+            display: block;
+            position: absolute;
+            background-color: #fcf9b3;
+            top: 120px;
+            bottom: 120px;
+            left: 120px;
+            right: 120px;
+        }
+
+                #div13 {
+            display: block;
+            position: absolute;
+            background-color: black;
+            top: 130px;
+            bottom: 130px;
+            left: 130px;
+            right: 130px;
+        }
+
+               #div14 {
+            display: block;
+            position: absolute;
+            background-color: #fcfac0;
+            top: 140px;
+            bottom: 140px;
+            left: 140px;
+            right: 140px;
+        }
+
+                #div15 {
+            display: block;
+            position: absolute;
+            background-color: black;
+            top: 150px;
+            bottom: 150px;
+            left: 150px;
+            right: 150px;
+        }
+
+                #div16 {
+            display: block;
+            position: absolute;
+            background-color: #fcfbcc;
+            top: 160px;
+            bottom: 160px;
+            left: 160px;
+            right: 160px;
+        }
+
+                #div17 {
+            display: block;
+            position: absolute;
+            background-color: black;
+            top: 170px;
+            bottom: 170px;
+            left: 170px;
+            right: 170px;
+        }
+
+                #div18 {
+            display: block;
+            position: absolute;
+            background-color: #fcfcd7;
+            top: 180px;
+            bottom: 180px;
+            left: 180px;
+            right: 180px;
+        }
+
+                #div19 {
+            display: block;
+            position: absolute;
+            background-color: black;
+            top: 190px;
+            bottom: 190px;
+            left: 190px;
+            right: 190px;
+        }
+
+                #div20 {
+            display: block;
+            position: absolute;
+            background-color: #004cfc;
+            top: 200px;
+            bottom: 200px;
+            left: 200px;
+            right: 200px;
+            animation-name: bluesquare1;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+
+        @keyframes bluesquare1 {
+  0%   {top: 200px; left: 300px; background: yellow;}
+  25%  {top: 400px; left: 200px; background: blue;}
+  50%  {top: 200px; left: 600px; background: yellow;}
+  75%  {top: 200px; left: 200px; background: blue;}
+  100% {top: 400px; left: 400px; background: yellow;}
+}
+
+
+
+       
+
+
+
+
+
+        }
+
+        @media screen and (min-width: 850px) and (max-width: 920px) {
+            /* Yu Jung */
+            body {
+                background-color: #84f54f;
+                animation-name: backgroundColorPalette4;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes backgroundColorPalette4 {
+                from {background-color: rgb(19, 172, 172);}
+                to {background-color: rgb(71, 71, 92);}
+            }
+            [id^=div] {
+                display: none;
+            }
+            #div5 {
+                display: block;
+                position: absolute;
+                top: 20%;
+                left: 20%;
+                width: 10vw;
+                height: 10vw;
+                padding: 20%;
+                border-radius: 50%;
+                transform: translateX(0%) translateY(50%);
+                animation: square-2 0.5s 1s infinite alternate-reverse;  
+               
+            }
+            @keyframes square-2 {
+                0%  {
+                    border-radius:50 50 20 0;
+                    background: #9bfa6e;
+                    transform:scale(1%) translateX(0px) translateY(0px);
+                }
+                25%  {
+                    border-radius:0 0 0 0;
+                    background:#92dc7e;
+                    transform:scale(30%) translateX(780px) translateY(0px);
+                    
+                }
+                50%  {
+                    border-radius:0 0 0 0;
+                    background:#39b48e;
+                    transform:scale(50%) translateX(780px) translateY(0px);
+                }
+                75%  { 
+                    border-radius:0 0 0 0;
+                    background:#00898a;
+                    transform:scale(70%) translateX(780px) translateY(0px);
+                }
+                100% {  
+                    border-radius:0 0 0 0;
+                    background:#2a4858;
+                    transform:scale(90%) translateX(780px) translateY(0px);
+                }
+            }
+        
+}
+        
+        
+        @media screen and (min-width: 780px) and (max-width: 850px) {
+            /* Hope */
+        body {
+                background-color: #FFFFFF;
+                animation-name: backgroundColorPalette3;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes backgroundColorPalette3 {
+                from {background-color: red;}
+                to {background-color: blue;}
+            }
+            [id^=div] {
+                display: none;
+            }
+            #div4 {
+                display: block;
+                position: absolute;
+                top: 20%;
+                left: -40%;
+                width: 10vw;
+                height: 10vw;
+                padding: 20%;
+                border-radius: 50%;
+                transform: translateX(50%) translateY(50%);
+                animation: square 2.5s .5s infinite alternate-reverse;  
+               /* animation-duration: 5s;
+                animation-iteration-count: infinite;*/
+            }
+            @keyframes square {
+                0%  {
+                    border-radius:0 0 0 0;
+                    background: yellow;
+                    transform:scale(10%) translateX(0px) translateY(0px);
+                }
+                25%  {
+                    border-radius:0 0 0 0;
+                    background:green;
+                    transform:scale(30%) translateX(780px) translateY(0px);
+                    
+                }
+                50%  {
+                    border-radius:0 0 0 0;
+                    background:yellow;
+                    transform:scale(50%) translateX(780px) translateY(0px);
+                }
+                75%  { 
+                    border-radius:0 0 0 0;
+                    background:green;
+                    transform:scale(70%) translateX(780px) translateY(0px);
+                }
+                100% {  
+                    border-radius:0 0 0 0;
+                    background:yellow;
+                    transform:scale(90%) translateX(780px) translateY(0px);
+                }
+            }
+        
+
+        }
+        
+        @media screen and (min-width: 710px) and (max-width: 780px) {            /* Colleen */
+            /* Alex */
+            body {
+                background-color: #FFFFFF;
+                animation-name: backgroundColorPalette2;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes backgroundColorPalette2 {
+                    0% {
+                background: antiquewhite;
+                    }
+                    25% {
+                background: navajowhite;
+                    }
+                    50% {
+                background: whitesmoke;
+                    }
+                    75% {
+                background: ghostwhite;
+                    }
+                    100% {
+                background: floralwhite;
+                     }
+            }
+            [id^=div] {
+                display: none;
+            }
+            #div3 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 10vw;
+                height: 10vw;
+                padding: 20%;
+                border-radius: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                animation: circle-to-square 2.5s .5s infinite cubic-bezier(0,.03,.295,0.225) alternate-reverse;   
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes circle-to-square {
+                0%  {
+                    border-radius:0 0 0 0;
+                    background: cyan;
+                    transform:rotate(45deg);
+                    left:0px; top:50px;
+                }
+                25%  {
+                    border-radius:50% 0 0 0;
+                    background:yellowgreen;
+                    transform:rotate(135deg);
+                    left:400px; top:100px;
+                }
+                50%  {
+                    border-radius:50% 50% 0 0;
+                    background:indianred;
+                    transform:rotate(180deg);
+                    left:0px; top:600px;
+                }
+                75%  { 
+                    border-radius:50% 50% 50% 0;
+                    background:orangered;
+                    transform:rotate(315deg);
+                    left:400px; top:100px;
+                }
+                100% {  
+                    border-radius:50%;
+                    background:darksalmon;
+                    transform:rotate(404deg);
+                    left:0px; top:0px;
+                }
+            }
+          }
+        
+        
+        @media screen and (min-width: 640px) and (max-width: 710px) {
+            /* Nicole */
+            body {
+                background-color: rgb(81, 255, 78);
+                animation-name: backgroundColorPalette;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+}
+            @keyframes backgroundColorPalette {
+        0% {
+    background: #ffb088;
+        }
+        25% {
+    background: #c09adb;
+        }
+        50% {
+    background: #27279f;
+        }
+        75% {
+    background: #ffd97d;
+        }
+        100% {
+    background: #86e8d8;
+         }
+}
+
+            [id^=div] {
+                display: none;
+            }
+            #div2 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 10vw;
+                height: 10vw;
+                padding: 20%;
+                background-color: rgb(146, 19, 116);
+                border-radius: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                mix-blend-mode:color-burn;
+                animation-name: move;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes move{
+             0%   {background-color:rgb(0, 13, 255);}
+             25%   {background-color:rgb(255, 41, 41); left:150px; top:200px;}
+             50%   {background-color:rgb(255, 208, 0); left:200px; top:700px;}
+             75%   {background-color:rgb(225, 0, 250); left:550px; top:200px;}
+             100%   {background-color:rgb(0, 13, 255);}
+            }
+        }
+        
+        
+        @media screen and (min-width: 320px) and (max-width: 640px){ 
+            /* Minkyoung */
+            body {
+                background-color: #FFF;
+            }
+            [id^=div] {
+                display: none;
+            }
+            #div1 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 10vw;
+                height: 10vw;
+                padding: 20%;
+                background-color: #000;
+                border-radius: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+    <div id="div6"></div>
+    <div id="div7"></div>
+    <div id="div8"></div>
+    <div id="div9"></div>
+    <div id="div10"></div>
+    <div id="div11"></div>
+    <div id="div12"></div>
+    <div id="div13"></div>
+    <div id="div14"></div>
+    <div id="div15"></div>
+    <div id="div16"></div>
+    <div id="div17"></div>
+    <div id="div18"></div>
+    <div id="div19"></div>
+    <div id="div20"></div>
+</body>
+
+</html>

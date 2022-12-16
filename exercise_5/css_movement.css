@@ -1,0 +1,59 @@
+.centered {
+  position: fixed;
+  top: 25%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+/*body {
+	background: lightblue;
+	}
+		
+.rshape{
+	background: white;
+	transition: background: 2s;
+	onmouseover="bgRed(this)" 
+	onmouseout="bgWhite(this)"
+}*/
+
+/*.rshape:hover {
+	background: blue;
+}*/
+
+#r3_1 {
+	position: absolute;
+	width: 300px;
+	height: 500px;
+	background-color: red;
+	margin: 0 auto;
+	clip-path: polygon(0 17%, 29% 0%, 77% 16%, 78% 47%, 43% 71%, 0 56%);
+}
+
+#r3_2 {
+	position: absolute;
+	width: 300px;
+	height: 500px;
+	background-color: red;
+	margin: 0 auto;
+	clip-path: polygon(0 39%, 17% 23%, 27% 29%, 27% 69%, 10% 81%, 0 78%);
+}
+
+#r3_3 {
+	position: absolute;
+	width: 300px;
+	height: 500px;
+	background-color: red;
+	margin: 0 auto;
+	clip-path: polygon(0 18%, 0 31%, 55% 94%, 75% 100%, 100% 84%, 25% 4%);
+}
+
+#r3_4 {
+	position: absolute;
+	width: 300px;
+	height: 500px;
+	background-color: white;
+	margin: 0 auto;
+	clip-path: polygon(0 17%, 29% 0%, 77% 16%, 78% 47%, 43% 71%, 0 56%);
+	transform: scale(0.35, 0.35);
+	transform-origin: 38% 38%;
+}

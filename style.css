@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-/*@font-face {
-	font-family: 'MyWebFont';
-	src:  url('myfont.woff2') format('woff2'),
-	src:  url('myfont.woff2') format('woff2');
-}*/
-
 h1 {
   font-family: 'Karla', sans-serif;
   font-weight: 600;
@@ -27,92 +21,12 @@ h1 {
   display: flex;
 }
 
-
-/* Create two equal columns that sits next to each other */
 .column {
   flex: 33%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
 }
 
-/*h2 {
-  font-family: 'Hanken Grotesk', sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: -.02em;
-  color: rgba(0, 0, 0, 0.8);
-  text-transform: uppercase;
-  margin-top: .2em;
-  margin-bottom: .2em;
-  -webkit-font-smoothing: antialiased;
-}
 
-h3 {
-  font-family: 'Hanken Grotesk', monospace;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.25em;
-  letter-spacing: -.02em;
-  color: rgba(0, 0, 0, 0.8);
-  text-align: justify;
-  text-justify: inter-word;
-  -webkit-font-smoothing: antialiased;
-}
-
-h4 {
-  font-family: 'Hanken Grotesk', monospace;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 1;
-  letter-spacing: .05em;
-  color: rgba(0, 0, 0, 0.8);
-  text-align: justify;
-  text-justify: inter-word;
-  -webkit-font-smoothing: antialiased;
-
-}
-
-h5 {
-  font-family: 'Hanken Grotesk', sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 56px;
-  line-height: 1;
-  letter-spacing: -.02em;
-  color: rgba(0, 0, 0, 0.8);
-  text-transform: uppercase;
-  margin-top: .2em;
-  margin-bottom: .2em;
-  -webkit-font-smoothing: antialiased;
-
-}
-
-hr {
-	border-color: black;
-	border-width: 1px;
-}
-
-p {
-  font-family: 'Hanken Grotesk', serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 1.25;
-  letter-spacing: -.02em;
-  color: rgba(0, 0, 0, 0.8);
-  -webkit-font-smoothing: antialiased;
-  width: 85em;
-}
-
-.header {
-  column-count: 2;
-  column-gap: 40px;
-  /*column-rule: 1px solid lightblue;*/
-/*}*/
 
 a {
   font-family: 'Karla', serif;
@@ -159,78 +73,7 @@ a.menu {
 
 }
 
-/*/*body {
-	/*background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/white_wall_hash.png");
-	mix-blend-mode: multiply;
-	background-repeat:  repeat-y;*/
-/* 	background-color: #ff691f;*/
-}
 
-
-
-
-/*class*/
-
-/*r*/
-
-/*id*/
-
-/*#mystyle {
-
-
-}
-
-p:first-child {
-
-
-}*/
-
-/*all elements*/
-
-/** {
-
-
-}*/
-
-/*container tag*/
-
-/*main > p {
-
-
-}
-
-hr.divider {
-  border-width: 1px;
-}
-
-.footer {
-  position: absolute;
-  width: 50%;
-  bottom: 10px;
-}
-
-.flex-container {
-  display: flex;
-}
-
-.flex-container > div {
-  margin: 5px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
-
-.text {
-  font-family: 'PT Sans', serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 1.25;
-  letter-spacing: -.02em;
-  color: rgba(0, 0, 0, 0.8);
-  -webkit-font-smoothing: antialiased;
-}*/
-
-/* Sidebar */
 .sidebar {
 height: 100%;
 width: 150px;
@@ -251,7 +94,7 @@ font-size: 12px;
 line-height: .4em;
 }
 
-/*e*/
+
 
 /* Skew */
 .hvr-skew {
